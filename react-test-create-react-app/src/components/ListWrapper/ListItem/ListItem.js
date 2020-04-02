@@ -11,7 +11,7 @@ const ListItem = () => (
                 Lekarka - Kasia Woźniak - przez swój kanał przekazuje medyczną
                 wiedzę w przyjemny w odbiorze sposób
             </p>
-            <button className="listItem__button">Kliknij po szczegóły</button>
+            <button className="listItem__button">Szczegóły</button>
         </div>
     </li>
 );

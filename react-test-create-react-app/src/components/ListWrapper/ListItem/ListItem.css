@@ -1,13 +1,31 @@
 .listItem__wrapper {
     list-style: none;
-    padding: 0;
+    padding: 10px;
+    margin: 0;
+    width: 25vw;
+    text-align: center;
+    border: 3px solid grey;
+    align-items: center;
+}
+
+.listItem__image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid grey;
+}
+
+.listItem__name {
+    font-weight: 700;
     margin: 0;
 }
 
-.listItem__image {}
+.listItem__description {
+    font-weight: 500;
+}
 
-.listItem__name {}
-
-.listItem__description {}
-
-.listItem__button {}
+.listItem__button {
+    padding: 5px;
+    font-weight: 500;
+    background: none;
+    border: 2px solid grey;
+}
