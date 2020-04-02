@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-    <App content="Rzetelne źródła na temat koronawirusa!" />,
+    <App content="Polecane strony w czasach koronawirusa!" />,
     document.getElementById("root")
 );
 
