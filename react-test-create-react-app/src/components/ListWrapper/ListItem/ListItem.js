@@ -1,19 +1,29 @@
 import React from "react";
 import "./ListItem.css";
-import mamaIStetoskopImage from "../../../assets/images/mamaistetoskop.jpg";
+import PropTypes from "prop-types";
 
-const ListItem = () => (
+const ListItem = ({ image, name, description, link }) => (
     <li className="listItem__wrapper">
-        <img src={mamaIStetoskopImage} className="listItem__image" alt="" />
+        <img src={image} className="listItem__image" alt={name} />
         <div>
-            <h2 className="listItem__name">Mama i stetoskop</h2>
-            <p className="listItem__description">
-                Lekarka - Kasia Woźniak - przez swój kanał przekazuje medyczną
-                wiedzę w przyjemny w odbiorze sposób
-            </p>
-            <button className="listItem__button">Szczegóły</button>
+            <h2 className="listItem__name">{name}</h2>
+            <p className="listItem__description">{description}</p>
+            <a href={link} className="listItem__button">
+                Szczegóły
+            </a>
         </div>
     </li>
 );
+
+ListItem.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    link: PropTypes.string.isRequired
+};
+
+ListItem.defaultProps = {
+    description: "Źródła godne polecenia!"
+};
 
 export default ListItem;
