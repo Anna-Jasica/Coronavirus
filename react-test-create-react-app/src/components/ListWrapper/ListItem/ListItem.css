@@ -2,12 +2,12 @@
     list-style: none;
     padding: 30px;
     margin: 0;
-    width: 15vw;
+    width: 35vw;
     text-align: center;
     border: 3px solid grey;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .listItem__image {
