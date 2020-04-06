@@ -4,6 +4,7 @@ import ListWrapper from "../src/components/ListWrapper/ListWrapper";
 import mamaIStetoskopImage from "../src/assets/images/mamaistetoskop.jpg";
 import lukaszBokImage from "../src/assets/images/lukaszbok.jpg";
 import kasiaSawickaImage from "../src/assets/images/kasiasawicka.jpg";
+import Form from "../src/components/Form/Form";
 
 const initialStateItems = [
     {
@@ -34,9 +35,27 @@ class App extends React.Component {
         items: [...initialStateItems],
     };
 
+    addItem = (e) => {
+        e.preventDefault();
+
+        const newItem = {
+            name: e.target[0].value,
+            link: e.target[1].value,
+            image: e.target[2].value,
+            description: e.target[3].value,
+        };
+
+        this.setState((prevState) => ({
+            items: [...this.state.items, newItem],
+        }));
+
+        e.target.reset();
+    };
+
     render() {
         return (
             <div>
+                <Form submitFn={this.addItem} />
                 <ListWrapper items={this.state.items} />
             </div>
         );
