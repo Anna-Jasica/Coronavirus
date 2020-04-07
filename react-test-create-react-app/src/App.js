@@ -5,6 +5,7 @@ import mamaIStetoskopImage from "../src/assets/images/mamaistetoskop.jpg";
 import lukaszBokImage from "../src/assets/images/lukaszbok.jpg";
 import kasiaSawickaImage from "../src/assets/images/kasiasawicka.jpg";
 import Form from "../src/components/Form/Form";
+import Title from "../src/components/Title/Title";
 
 const initialStateItems = [
     {
@@ -54,10 +55,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div id="mainContainer">
-                <Form submitFn={this.addItem} />
-                <ListWrapper items={this.state.items} />
-            </div>
+            <>
+                <div id="header">
+                    <Title>Polecane strony w czasach koronawirusa</Title>
+                </div>
+                <div id="mainContainer">
+                    <Form submitFn={this.addItem} />
+                    <ListWrapper items={this.state.items} />
+                </div>
+            </>
         );
     }
 }
