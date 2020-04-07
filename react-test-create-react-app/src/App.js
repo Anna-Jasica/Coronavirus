@@ -11,7 +11,7 @@ const initialStateItems = [
         image: mamaIStetoskopImage,
         name: "Mama i stetoskop",
         description:
-            "Lekarka - Kasia Woźniak - przez swój kanał przekazuje medyczną wiedzę w przyjemny w odbiorze sposób",
+            "Kasia Woźniak to lekarka, która poprzez swój kanał przekazuje medyczną wiedzę w rzeczowy sposób.",
         link: "https://www.youtube.com/channel/UCd44ZaZE6QTcL9qU86xm56A/videos",
     },
     {
@@ -25,7 +25,7 @@ const initialStateItems = [
         image: kasiaSawickaImage,
         name: "Kasia Sawicka",
         description:
-            "Pedagog z zamiłowaniem do psychologii. Warto śledzić jej kanał w trosce o swoje zdrowie psychiczne w czasach ogólnoświatowej paniki",
+            "Pedagog z zamiłowaniem do psychologii. Warto śledzić jej kanał w trosce o swoje zdrowie psychiczne - szczególnie w czasach wzmożonej paniki.",
         link: "https://www.youtube.com/channel/UC4FfcWV91rhP00dur0XiZzg/videos",
     },
 ];
@@ -54,7 +54,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="mainContainer">
                 <Form submitFn={this.addItem} />
                 <ListWrapper items={this.state.items} />
             </div>

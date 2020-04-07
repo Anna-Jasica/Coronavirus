@@ -13,3 +13,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: lightblue;
 }
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}

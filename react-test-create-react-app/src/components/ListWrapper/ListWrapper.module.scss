@@ -1,5 +1,6 @@
 .wrapper {
     margin-left: 0;
+    grid-column: 1 / 2;
     display: grid;
     grid-row-gap: 15px;
 }
